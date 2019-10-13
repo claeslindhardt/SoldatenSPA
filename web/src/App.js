@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.png';
+import logo from './logo1.png';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Nav from "react-bootstrap/Nav";
@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <header>
           <Navbar bg="light" expand="lg">
-              <Navbar.Brand href="#home"><img src={logo} cl assName="App-logo" alt="logo" /></Navbar.Brand>
+              <Navbar.Brand href="#home"><img src={logo} alt="Slogo" width={50} height={50} /></Navbar.Brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                   <Nav className="mr-auto">
@@ -35,6 +35,7 @@ function App() {
         <p>
             If you made it this far, it indicates something is working.
         </p>
+        <img src={logo} cl assName="App-logo" alt="logo" rounded/>
       </body>
     </div>
   );
