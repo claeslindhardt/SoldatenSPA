@@ -25,7 +25,7 @@
             <id>local</id>
             <build>
                 <plugins>
-                    <!--npm build -->
+                    <!-- NPM build -->
                     <plugin>
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>exec-maven-plugin</artifactId>
