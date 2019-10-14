@@ -10,9 +10,8 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 
-import {BrowserRouter} from "react-router-dom";
-import {Switch} from "react-bootstrap";
-
+import {Switch} from "react-router-dom"; /*Link, withRouter */
+import Route from "react-router-dom/Route";
 
 function App() {
   return (
@@ -44,15 +43,16 @@ function App() {
 
       </header>
       <body className="bodyApp">
-      <BrowserRouter>
+
           <div>
             <Switch>
                 <Route exact path={'/'} component={Home}/>
+                <Route path={'/home'} component={Home}/>
                 <Route path={'/Fifkassen'} component={fif}/>
                 <Route path={'*'}component={pageNotFound}/>
             </Switch>
           </div>
-      </BrowserRouter>
+
         <p>
             your text here
         </p>
@@ -81,7 +81,6 @@ const fif = ()=>{
 
 const pageNotFound = ()=>{
     return <div>
-        <Home/>
         <h1>404</h1>
         <h1>den underside du intastede i URL'en har vi ikke endnu.</h1>
         <br/>
