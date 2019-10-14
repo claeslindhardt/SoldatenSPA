@@ -21,8 +21,8 @@ function App() {
         <header>
           <Navbar bg="light" expand="lg">
               <Navbar.Brand href="#home"><img src={logo1} alt="Slogo" width={50} height={50} /></Navbar.Brand>
-              <Navbar.Brand href="#home"><img src={FB} alt="Slogo" width={50} height={50} /></Navbar.Brand>
-              <Navbar.Brand href="#home"><img src={Insta} alt="Slogo" width={30} height={30} /></Navbar.Brand>
+              <Navbar.Brand href="https://m.facebook.com/soldatendk/?locale2=da_DK"><img src={FB} alt="Slogo" width={50} height={50} /></Navbar.Brand>
+              <Navbar.Brand href="https://www.instagram.com/soldatendk/?hl=da"><img src={Insta} alt="Slogo" width={30} height={30} /></Navbar.Brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                   <Nav className="mr-auto">
