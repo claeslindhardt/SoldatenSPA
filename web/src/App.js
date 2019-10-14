@@ -9,9 +9,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import Route from "react-router-dom/Route";
-import Switch from "react-bootstrap/Switch";
+
 import {BrowserRouter} from "react-router-dom";
+import {Switch} from "react-bootstrap";
 
 
 function App() {
@@ -27,8 +27,8 @@ function App() {
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                   <Nav className="mr-auto">
-                      <Nav.Link href="#/Home">Startside</Nav.Link>
-                      <Nav.Link href="#Fifkassen">Fifkassen</Nav.Link>
+                      <Nav.Link href="#/home">Startside</Nav.Link>
+                      <Nav.Link href="#/Fifkassen">Fifkassen</Nav.Link>
                       <Nav.Link href="https://issuu.com/soldaten">Arkiv</Nav.Link>
                       <NavDropdown title="Readaktionen" id="basic-nav-dropdown">
                           <NavDropdown.Item href="#action/3.1">Kontakt</NavDropdown.Item>
@@ -41,18 +41,18 @@ function App() {
               </Navbar.Collapse>
           </Navbar>
 
-      </header>
 
+      </header>
       <body className="bodyApp">
       <BrowserRouter>
           <div>
-              <Switch>
-                  <Route path={"/home"} component={Home}/>
-                  <Route exact path={"/"} render={()=>Home()}/>
-              </Switch>
+            <Switch>
+                <Route exact path={'/'} component={Home}/>
+                <Route path={'/Fifkassen'} component={fif}/>
+                <Route path={'*'}component={pageNotFound}/>
+            </Switch>
           </div>
       </BrowserRouter>
-
         <p>
             your text here
         </p>
@@ -73,9 +73,11 @@ const Home = ()=>{
         <img src={logo} cl assName="App-logo" alt="logo" rounded/>
     </div>
 };
-
-/*
-                  <Route component={pageNotFound} />
+const fif = ()=>{
+    return <div>
+        <h1>Fifkassen</h1>
+    </div>
+};
 
 const pageNotFound = ()=>{
     return <div>
@@ -85,4 +87,4 @@ const pageNotFound = ()=>{
         <br/>
         <h1>Syntes du vi mangler den? så skriv til...</h1>
     </div>
-}; */
+};
