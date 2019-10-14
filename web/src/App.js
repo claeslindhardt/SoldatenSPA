@@ -16,7 +16,7 @@ import Switch from "react-bootstrap/Switch";
 function App() {
   return (
     <div className="App">
-        <title>Soldaten</title>
+        <title>Soldaten.</title>
 
         <header>
           <Navbar bg="light" expand="lg">
