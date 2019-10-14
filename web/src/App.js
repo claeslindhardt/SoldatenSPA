@@ -54,7 +54,7 @@ function App() {
           </div>
 
         <p>
-            your text here
+            .
         </p>
       </body>
     </div>
