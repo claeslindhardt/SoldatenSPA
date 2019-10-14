@@ -1,5 +1,6 @@
 import React from 'react';
-import logo from './Logos/logo1.png';
+import logo1 from './Logos/logo1.png';
+import logo from './Logos/logo.png';
 import FB from './Logos/FBlogo.png';
 import Insta from './Logos/Instalogo.png';
 
@@ -15,9 +16,11 @@ import Switch from "react-bootstrap/Switch";
 function App() {
   return (
     <div className="App">
-      <header>
+        <title>Soldaten</title>
+
+        <header>
           <Navbar bg="light" expand="lg">
-              <Navbar.Brand href="#home"><img src={logo} alt="Slogo" width={50} height={50} /></Navbar.Brand>
+              <Navbar.Brand href="#home"><img src={logo1} alt="Slogo" width={50} height={50} /></Navbar.Brand>
               <Navbar.Brand href="#home"><img src={FB} alt="Slogo" width={50} height={50} /></Navbar.Brand>
               <Navbar.Brand href="#home"><img src={Insta} alt="Slogo" width={30} height={30} /></Navbar.Brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -40,13 +43,14 @@ function App() {
 
       </header>
       <body className="bodyApp">
-        <p>
-            If you made it this far, it indicates something is working.
-        </p>
+
         <Switch>
             <Route path={"/home"} component={Home}/>
             <Route exact path={"/"} render={()=><h1>Startside</h1>}/>
         </Switch>
+        <p>
+            If you made it this far, it indicates something is working.
+        </p>
       </body>
     </div>
   );
