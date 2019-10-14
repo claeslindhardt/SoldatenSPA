@@ -11,6 +11,7 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Route from "react-router-dom/Route";
 import Switch from "react-bootstrap/Switch";
+import {BrowserRouter} from "react-router-dom";
 
 
 function App() {
@@ -40,16 +41,20 @@ function App() {
               </Navbar.Collapse>
           </Navbar>
 
-
       </header>
-      <body className="bodyApp">
 
-        <Switch>
-            <Route path={"/home"} component={Home}/>
-            <Route exact path={"/"} render={()=><h1>Startside</h1>}/>
-        </Switch>
+      <body className="bodyApp">
+      <BrowserRouter>
+          <div>
+              <Switch>
+                  <Route path={"/home"} component={Home}/>
+                  <Route exact path={"/"} render={()=>Home()}/>
+              </Switch>
+          </div>
+      </BrowserRouter>
+
         <p>
-            If you made it this far, it indicates something is working.
+            your text here
         </p>
       </body>
     </div>
@@ -68,3 +73,16 @@ const Home = ()=>{
         <img src={logo} cl assName="App-logo" alt="logo" rounded/>
     </div>
 };
+
+/*
+                  <Route component={pageNotFound} />
+
+const pageNotFound = ()=>{
+    return <div>
+        <Home/>
+        <h1>404</h1>
+        <h1>den underside du intastede i URL'en har vi ikke endnu.</h1>
+        <br/>
+        <h1>Syntes du vi mangler den? så skriv til...</h1>
+    </div>
+}; */
