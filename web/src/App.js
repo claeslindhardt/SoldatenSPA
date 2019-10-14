@@ -70,7 +70,7 @@ export default App;
 const Home = ()=>{
     return <div>
         <h1>Startside</h1>
-        <img src={logo} cl assName="App-logo" alt="logo" rounded/>
+        <img src={logo} cl assName="App-logo" alt="logo" width={150} />
     </div>
 };
 const fif = ()=>{
